@@ -15,3 +15,14 @@ pub struct Budget {
     pub spent: i128,
     pub status: BudgetStatus,
 }
+
+use soroban_sdk::contracttype;
+
+#[derive(Clone, Debug, Eq, PartialEq)]
+#[contracttype]
+pub enum BudgetCategory {
+    Food,
+    Transport,
+    Rent,
+    Entertainment,
+}
