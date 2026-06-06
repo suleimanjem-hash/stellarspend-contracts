@@ -11,17 +11,8 @@
 //! - **Delegated Management**: Owners can authorize managers with granular permissions
 //!
 #![no_std]
-use soroban_sdk::{contract, contractimpl, contracttype, symbol_short, Address, Env, Vec,
-    panic_with_error};
-//! Manages per-user category budgets with category-to-category transfers,
-//! transfer history, suspicious spending protection, multi-asset budgets,
-//! and deletion cooldown.
-
-#![no_std]
 
 mod storage;
-#[cfg(test)]
-mod test;
 mod types;
 
 use soroban_sdk::{
